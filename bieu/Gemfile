@@ -33,6 +33,9 @@ gem 'materialize-sass'
 gem 'paperclip', '~> 4.3.0'
 gem 'aws-sdk', '<2.0'
 
+# gem that lists db schema 
+gem 'annotate'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
