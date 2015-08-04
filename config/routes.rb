@@ -1,8 +1,27 @@
 Rails.application.routes.draw do
-  resources :photos
-  resources :professionals
-  resources :salons
-  resources :users
+  get 'static_pages/aboutUs'
+  get 'static_pages/home'
+
+  resources :photos, only: [:show]
+
+  resources :professionals do
+    resources :photos, shallow: true
+    resources :likes, shallow: true
+  end
+
+  resources :salons do
+    resources :photos, shallow: true
+    resources :likes, shallow: true
+  end
+
+  resources :users do
+    resources :photos, shallow: true
+    resources :likes, shallow: true
+  end
+
+  resources :sessions, only: [:new, :create, :destroy]
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

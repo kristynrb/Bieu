@@ -1,4 +1,6 @@
 class Professional < ActiveRecord::Base
+  has_secure_password
+  
   has_many :photos
   has_many :likes
   belongs_to :salon
