@@ -31,9 +31,10 @@ gem 'materialize-sass'
 
 # For picture uploads
 gem 'paperclip', '~> 4.3.0'
+gem 'dotenv-rails', :groups => [:development, :test]
 gem 'aws-sdk', '<2.0'
 
-# gem that lists db schema 
+# gem that lists db schema
 gem 'annotate'
 
 # Use Unicorn as the app server
