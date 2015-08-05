@@ -1,6 +1,6 @@
 <h1>Sign up</h1>
 
-<form action="<%= users_path %>" method="post">
+<form action="<%= users_path %>" method="post" enctype="multipart/form-data" accept-charset="UTF-8" >
   <input  type="hidden"
           name="authenticity_token"
           value="<%= form_authenticity_token %>">
@@ -8,7 +8,14 @@
   <input type="text" name="user[email]" placeholder="email">
   <input type="password" name="user[password]" placeholder="password">
   <input type="text" name="user[username]" placeholder="username">
-  <input type="text" name="user[member_type]" placeholder="user, salon, or professional?">
+
+  <div id="fileUpload" class="file-field input-field row">
+  
+    <div id="fileUpload2" class="btn">
+      <span>Upload a photo!</span>
+      <input type="file" name="user[profile_photo]" id="profile_photo"/>
+    </div>
+  </div>
 
   <input type="submit">
 </form>

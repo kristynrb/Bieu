@@ -1,28 +1,21 @@
 Rails.application.routes.draw do
 
+  root 'static_pages#home'
+
   get 'static_pages/aboutUs'
-  get 'static_pages/home'
 
-  resources :photos, only: [:show]
+  resources :posts, only: [:show]
 
-  resources :professionals do
-    resources :photos, shallow: true
-    resources :likes, shallow: true
-  end
+  resources :professionals, only: [:new, :show]
 
-  resources :salons do
-    resources :photos, shallow: true
-    resources :likes, shallow: true
-  end
+  resources :salons, only: [:new, :show]
 
   resources :users do
-    resources :photos, shallow: true
+    resources :posts, shallow: true
     resources :likes, shallow: true
   end
 
   resources :sessions, only: [:new, :create, :destroy]
-
-  root 'static_pages#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,18 +1,20 @@
-class PhotosController < ApplicationController
+class PostsController < ApplicationController
   before_action :redirect_unless_logged_in
+  before_action :grab_current_user
 
   def index
     redirect_to new_user_photo_path
   end
 
   def new
-    @photo = Photo.new
+    @user = User.find(params[:user_id])
+    @posts = Posts.new
   end
 
   def create
-    @photo = Photo.new(photo_params)
+    @posts = Posts.new(posts_params)
 
-    if @photo.save
+    if @post.save
       redirect_to @user
     else
       redirect_to new_user_path
@@ -30,5 +32,9 @@ class PhotosController < ApplicationController
     else
       redirect_to new_session_path unless @current_user
     end
+  end
+
+  def grab_current_user
+    @current_user = current_user
   end
 end

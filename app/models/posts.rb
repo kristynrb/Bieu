@@ -1,4 +1,4 @@
-class Photo < ActiveRecord::Base
+class Posts < ActiveRecord::Base
   belongs_to :user
   belongs_to :salon
   belongs_to :professional

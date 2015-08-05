@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150803181808) do
+ActiveRecord::Schema.define(version: 20150805182049) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,13 +30,21 @@ ActiveRecord::Schema.define(version: 20150803181808) do
   add_index "likes", ["salon_id"], name: "index_likes_on_salon_id", using: :btree
   add_index "likes", ["user_id"], name: "index_likes_on_user_id", using: :btree
 
-  create_table "photos", force: :cascade do |t|
+  create_table "posts", force: :cascade do |t|
     t.integer  "before_photo_id"
     t.integer  "after_photo_id"
     t.integer  "photo_pair_id"
     t.string   "comment"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.string   "before_photo_id_file_name"
+    t.string   "before_photo_id_content_type"
+    t.integer  "before_photo_id_file_size"
+    t.datetime "before_photo_id_updated_at"
+    t.string   "after_photo_id_file_name"
+    t.string   "after_photo_id_content_type"
+    t.integer  "after_photo_id_file_size"
+    t.datetime "after_photo_id_updated_at"
   end
 
   create_table "professionals", force: :cascade do |t|
@@ -82,16 +90,20 @@ ActiveRecord::Schema.define(version: 20150803181808) do
   add_index "salons", ["zipcode"], name: "index_salons_on_zipcode", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",           null: false
-    t.string   "password_digest", null: false
-    t.string   "username",        null: false
-    t.string   "member_type",     null: false
+    t.string   "email",                      null: false
+    t.string   "password_digest",            null: false
+    t.string   "username",                   null: false
+    t.string   "member_type",                null: false
     t.string   "profile_photo"
     t.string   "before_photo_id"
     t.string   "after_photo_id"
     t.string   "photo_pair_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.string   "profile_photo_file_name"
+    t.string   "profile_photo_content_type"
+    t.integer  "profile_photo_file_size"
+    t.datetime "profile_photo_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", using: :btree
@@ -104,8 +116,4 @@ ActiveRecord::Schema.define(version: 20150803181808) do
     t.datetime "updated_at"
   end
 
-  add_foreign_key "likes", "photos"
-  add_foreign_key "likes", "professionals"
-  add_foreign_key "likes", "salons"
-  add_foreign_key "likes", "users"
 end
