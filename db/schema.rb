@@ -96,9 +96,16 @@ ActiveRecord::Schema.define(version: 20150803181808) do
 
   add_index "users", ["email"], name: "index_users_on_email", using: :btree
 
+  create_table "widgets", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "stock"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   add_foreign_key "likes", "photos"
   add_foreign_key "likes", "professionals"
   add_foreign_key "likes", "salons"
   add_foreign_key "likes", "users"
-
 end

@@ -23,21 +23,15 @@ default: &default
 
 development:
   <<: *default
-<<<<<<< HEAD
-  database: ruby-getting-started_development
-=======
   database: bieu_development
->>>>>>> d32a3bd85f2fe74fc25b17260fb76eea04ada3d8
+
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-<<<<<<< HEAD
-  #username: ruby-getting-started
-=======
+
   #username: bieu
->>>>>>> d32a3bd85f2fe74fc25b17260fb76eea04ada3d8
 
   # The password associated with the postgres role (username).
   #password:
