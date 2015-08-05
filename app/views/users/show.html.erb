@@ -1,9 +1,11 @@
 <h1>This is the user's show page!</h1>
 
+<% user = @user %>
+
 <p>Welcome, <%= @user.username %><p>
 
 <h3>Profile Photo</h3>
 <br>
 <%= image_tag @user.profile_photo.url(:thumb) %>
-<h2>Post a before and after photo</h2></br>
-<a href="<%= new_user_post_path %>">Learn more about Bieu</a>
+
+<a href="<%= new_user_post_path(user.id) %>">Post some before and after photos</a>

@@ -6,7 +6,7 @@ class CreateProfessionals < ActiveRecord::Migration
       t.string :first_name, null: false
       t.string :last_name, null: false
       t.string :salon_name, null: false
-      t.string :member_type, null: false
+      t.string :member_type
       t.string :profile_photo
       t.string :phone_number
       t.string :web_address

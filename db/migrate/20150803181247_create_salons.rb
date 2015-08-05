@@ -4,7 +4,7 @@ class CreateSalons < ActiveRecord::Migration
       t.string :email, null: false
       t.string :password_digest, null: false
       t.string :salon_name, null: false
-      t.string :member_type, null: false
+      t.string :member_type
       t.string :profile_photo
       t.string :address_1
       t.string :address_2
