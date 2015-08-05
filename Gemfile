@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-<<<<<<< HEAD
+
 ruby '2.2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -15,22 +15,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
-=======
-
-
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.3'
-# Use postgresql as the database for Active Record
-gem 'pg'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
->>>>>>> d32a3bd85f2fe74fc25b17260fb76eea04ada3d8
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -39,17 +23,9 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
-<<<<<<< HEAD
-gem 'sdoc', '~> 0.4.0',          group: :doc
-
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 
 gem 'puma'
-=======
+
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
@@ -68,16 +44,13 @@ gem 'annotate'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
->>>>>>> d32a3bd85f2fe74fc25b17260fb76eea04ada3d8
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-<<<<<<< HEAD
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-=======
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -88,4 +61,3 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
->>>>>>> d32a3bd85f2fe74fc25b17260fb76eea04ada3d8
