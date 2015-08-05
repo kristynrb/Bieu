@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :grab_current_user
 
   def index
-    redirect_to new_user_photo_path
+    @posts = Posts.find(params[:user_id])
   end
 
   def new
@@ -14,10 +14,10 @@ class PostsController < ApplicationController
   def create
     @posts = Posts.new(posts_params)
 
-    if @post.save
-      redirect_to @user
+    if @posts.save
+      redirect_to user_posts_path
     else
-      redirect_to new_user_path
+      redirect_to user_posts_path
     end
   end
 
@@ -25,6 +25,11 @@ class PostsController < ApplicationController
   end
 
   private
+
+  def posts_params
+    params.require(:posts).permit(:before_photo_id, :after_photo_id, :comment)
+  end
+
 
   def redirect_unless_logged_in
     if session[:current_user_id]

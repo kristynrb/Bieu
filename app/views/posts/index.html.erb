@@ -1,0 +1,7 @@
+<h1>This is the user's post display page</h1>
+
+<h2>Before</h2>
+<%= image_tag @posts.before_photo_id.url(:thumb) %>
+
+<h2>After</h2>
+<%= image_tag @posts.after_photo_id.url(:thumb) %>
