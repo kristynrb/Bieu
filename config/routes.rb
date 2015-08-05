@@ -1,12 +1,41 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   resources :widgets
+=======
+  get 'static_pages/aboutUs'
+  get 'static_pages/home'
+
+  resources :photos, only: [:show]
+
+  resources :professionals do
+    resources :photos, shallow: true
+    resources :likes, shallow: true
+  end
+
+  resources :salons do
+    resources :photos, shallow: true
+    resources :likes, shallow: true
+  end
+
+  resources :users do
+    resources :photos, shallow: true
+    resources :likes, shallow: true
+  end
+
+  resources :sessions, only: [:new, :create, :destroy]
+
+>>>>>>> d32a3bd85f2fe74fc25b17260fb76eea04ada3d8
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+<<<<<<< HEAD
 
   root 'welcome#index'
+=======
+  # root 'welcome#index'
+>>>>>>> d32a3bd85f2fe74fc25b17260fb76eea04ada3d8
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
