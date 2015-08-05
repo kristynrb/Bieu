@@ -27,13 +27,10 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-<<<<<<< HEAD
-=======
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
   # yet still be able to expire them through the digest params.
   config.assets.digest = true
 
->>>>>>> d32a3bd85f2fe74fc25b17260fb76eea04ada3d8
   # Adds additional error checking when serving assets at runtime.
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.
@@ -41,8 +38,6 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
-<<<<<<< HEAD
-=======
 
   config.paperclip_defaults = {
   :storage => :s3,
@@ -54,5 +49,5 @@ Rails.application.configure do
      :s3_host_name => 's3-us-west-2.amazonaws.com'
   }
 }
->>>>>>> d32a3bd85f2fe74fc25b17260fb76eea04ada3d8
+
 end

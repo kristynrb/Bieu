@@ -11,25 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20140707111715) do
-=======
 ActiveRecord::Schema.define(version: 20150803181808) do
->>>>>>> d32a3bd85f2fe74fc25b17260fb76eea04ada3d8
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
-  create_table "widgets", force: true do |t|
-    t.string   "name"
-    t.text     "description"
-    t.integer  "stock"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-=======
   create_table "likes", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "salon_id"
@@ -114,5 +100,5 @@ ActiveRecord::Schema.define(version: 20150803181808) do
   add_foreign_key "likes", "professionals"
   add_foreign_key "likes", "salons"
   add_foreign_key "likes", "users"
->>>>>>> d32a3bd85f2fe74fc25b17260fb76eea04ada3d8
+
 end
