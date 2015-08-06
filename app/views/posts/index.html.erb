@@ -1,0 +1,14 @@
+
+<% user = @user %>
+<h1>Reviews for <%= @user.username %></h1>
+<% if !@posts.before_photo_id? %>
+  <h2>You don't have any reviews.<h2>
+  <a href="<%= new_user_post_path(user.id) %>">Post a review</a>
+<% else %>
+  <% @allposts.each do |p| %>
+    <%= image_tag p.before_photo_id.url(:thumb) %><%= image_tag p.after_photo_id.url(:thumb) %>
+    <br>
+    <p><%= p.comment %></p>
+  <% end %>
+  <a href="<%= new_user_post_path(user.id) %>">Post another review</a>
+<% end %>
