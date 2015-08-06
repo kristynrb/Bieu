@@ -27,6 +27,24 @@ class PostsController < ApplicationController
     @posts = Posts.all
   end
 
+  def edit
+    @posts = Posts.find(:user_id)
+    @allposts = Posts.all
+  end
+
+  def update
+    @posts = Posts.find(params[:id])
+    @posts.update(posts_params)
+    @posts.save
+    render 'posts/index'
+  end
+
+  def destroy
+    @post = Posts.find(params[:id])
+    @post.destroy
+    redirect_to new_user_path, :notice => "Your post has been deleted."
+  end
+
   private
 
   def posts_params
