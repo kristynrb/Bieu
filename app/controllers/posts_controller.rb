@@ -28,7 +28,7 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @posts = Posts.find(params[:id])
+    @posts = Posts.find(:user_id)
     @allposts = Posts.all
   end
 
@@ -42,7 +42,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Posts.find(params[:id])
     @post.destroy
-    redirect_to posts_path, :notice => "Your post has been deleted."
+    redirect_to new_user_path, :notice => "Your post has been deleted."
   end
 
   private
