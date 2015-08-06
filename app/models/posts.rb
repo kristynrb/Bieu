@@ -4,6 +4,8 @@ class Posts < ActiveRecord::Base
   belongs_to :professional
   has_many :likes
 
+  has_many :posted_photos, through: :posts, source: :user
+  
   has_attached_file :before_photo_id, styles: {
         thumb: '100x100>',
         square: '200x200#',
