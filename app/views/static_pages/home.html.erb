@@ -1,8 +1,38 @@
 <%= stylesheet_link_tag    "static_pages.scss", media: "all", "data-turbolinks-track" => true %>
 
-<img src="http://i.huffpost.com/gen/1566613/images/o-LIPSTICKS-facebook.jpg">
+
+<img id="poster" class="responsive-img" src="http://i.huffpost.com/gen/1566613/images/o-LIPSTICKS-facebook.jpg">
 
 <div class="row">
-    <div class="col s6"><img id="front_pic" class="materialboxed" width="100%" src="/images/B1.jpeg"></div>
-    <div class="col s6"><img id="front_pic" class="materialboxed" width="100%" src="/images/A1.jpeg"></div>
+  <div class="col s12">This div is 12-columns wide</div>
+  <div class="col s6 m5">
+    <div class="card">
+      <div class="card-image">
+        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRXuoh8-RM6GnhBFdfDHEIaqj4f_BJAzXUzgb06yr1I6FX1E2_YHg">
+        <span class="card-title">Before</span>
+      </div>
+      <div class="card-content">
+        <p>Comment space.</p>
+      </div>
+      <div class="card-action">
+        <a href="#">Link to product/salon</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s6 m5">
+    <div class="card large">
+      <div class="card-image">
+        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRXuoh8-RM6GnhBFdfDHEIaqj4f_BJAzXUzgb06yr1I6FX1E2_YHg">
+        <span class="card-title">After</span>
+      </div>
+      <div class="card-content">
+        <p>Comment space.</p>
+      </div>
+      <div class="card-action">
+        <a href="#">Link to product/salon</a>
+      </div>
+    </div>
+  </div>
+</div>
 </div>

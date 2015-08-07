@@ -3,7 +3,13 @@
  * Copyright 2014-2015 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
+h1{
+  font-weight: thin !important;
+}
 
+html {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
+}
 .bieu-pink {
   background-color: #f9e6ea;}
 
@@ -1667,7 +1673,7 @@
  *    user zoom.
  */
 html {
-  font-family: sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -2202,6 +2208,16 @@ footer.page-footer {
     line-height: 50px;
     color: rgba(255, 255, 255, 0.8);
     background-color: rgba(51, 51, 51, 0.08); }
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
 
 table, th, td {
   border: none; }
@@ -5406,8 +5422,8 @@ a {
 
 html {
   line-height: 1.5;
-  font-family: "Roboto", sans-serif;
-  font-weight: normal;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: thin;
   color: rgba(0, 0, 0, 0.87); }
   @media only screen and (min-width: 0) {
     html {
