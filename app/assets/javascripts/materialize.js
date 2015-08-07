@@ -426,6 +426,7 @@ else {
   $(document).ready(function(){
     $('.collapsible').collapsible();
 		$(".button-collapse").sideNav();
+		$('.materialboxed').materialbox();
   });
 }( jQuery ));;(function ($) {
 
