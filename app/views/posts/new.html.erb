@@ -1,34 +1,37 @@
-<h1>Post some before & after photos</h1>
+<div class="container">
+  <h1>Make a review</h1>
 
-<fieldset>
+  <fieldset>
 
-<form action="<%= user_posts_path %>" method="post" enctype="multipart/form-data" accept-charset="UTF-8" >
-<input  type="hidden"
-        name="authenticity_token"
-        value="<%= form_authenticity_token %>">
+  <form action="<%= user_posts_path %>" method="post" enctype="multipart/form-data" accept-charset="UTF-8" >
+  <input  type="hidden"
+          name="authenticity_token"
+          value="<%= form_authenticity_token %>">
 
-<div id="fileUpload" class="file-field input-field row">
-  <input class="file-path validate" type="text"/>
-  <div id="fileUpload2" class="btn">
-    <span>Upload a before picture</span>
-    <input type="file" name="posts[before_photo_id]" id="before_photo_id"/>
+  <div id="fileUpload" class="file-field input-field row">
+    <div class="center-align">
+      <div id="fileUpload2" class="btn">
+        <span>Upload a before picture</span>
+        <input type="file" name="posts[before_photo_id]" id="before_photo_id"/>
+      </div>
+    </div>
   </div>
-</div>
 
-<div id="fileUpload" class="file-field input-field row">
-  <input class="file-path validate" type="text"/>
-  <div id="fileUpload2" class="btn">
-    <span>Upload a after picture</span>
-    <input type="file" name="posts[after_photo_id]" id="after_photo_id"/>
+  <div id="fileUpload" class="file-field input-field row">
+    <!-- <input class="file-path validate" type="text"/> -->
+    <div id="fileUpload2" class="btn">
+      <span>Upload an after picture</span>
+      <input type="file" name="posts[after_photo_id]" id="after_photo_id"/>
+    </div>
   </div>
+
+  <input type="text" name="posts[comment]" placeholder="Leave a review">
+
+  <button class="btn waves-effect waves-light"
+          type="submit"
+          name="action">FINISHED
+  </button>
+  <br /><br />
+
+  </fieldset>
 </div>
-
-<input type="text" name="posts[comment]" placeholder="Comments">
-
-<button class="btn waves-effect waves-light"
-        type="submit"
-        name="action">FINISHED
-</button>
-<br /><br />
-
-</fieldset>
