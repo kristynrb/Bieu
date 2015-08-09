@@ -27,6 +27,11 @@ main {
 h1{
   font-weight: thin !important;
 }
+
+p{
+  color: #AE9630;
+}
+
 footer.page-footer{
   background-color: grey darken-4 !important;
 }
