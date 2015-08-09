@@ -37,6 +37,13 @@
   </nav>
   <main>
     <body>
+      <div class="container">
+        <% if flash[:message] %>
+          <div class="message center align" style="background-color: red; width: 50%">
+            <%= flash[:message] %>
+          </div>
+        <% end %>
+      </div>
 
       <%= yield %>
 

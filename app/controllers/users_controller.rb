@@ -14,8 +14,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
+      login!(@user)
       redirect_to @user
     else
+      flash[:message] = @user.errors.full_messages.to_sentence
       redirect_to new_user_path
     end
   end
@@ -26,7 +28,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:email, :password, :username, :profile_photo)
+    params.require(:user).permit(:email, :password, :password_confirmation, :username, :profile_photo)
   end
 
   def grab_user

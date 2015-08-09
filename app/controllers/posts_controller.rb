@@ -1,6 +1,9 @@
 class PostsController < ApplicationController
   before_action :redirect_unless_logged_in
   before_action :grab_current_user
+  before_action :redirect_unless_logged_in
+
+  protect_from_forgery with: :null_session
 
   def index
     @posts = Posts.find(params[:user_id])

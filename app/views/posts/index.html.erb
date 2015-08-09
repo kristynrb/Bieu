@@ -1,6 +1,7 @@
 
 <% user = @user %>
 <div class="container">
+  <%= button_to "Log out", session_path, method: :delete %>
   <h1>Reviews for <%= @user.username %></h1>
   <% if !@posts.before_photo_id? %>
     <h2>You don't have any reviews.<h2>

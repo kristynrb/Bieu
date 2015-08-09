@@ -1,6 +1,7 @@
 <% user = @user %>
 
 <div class="container">
+  <%= button_to "Log out", session_path, method: :delete %>
   <div class="row">
      <div class="col s12">
         <h3 class="center-align">Welcome, <%= @user.username %></h3>

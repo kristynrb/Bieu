@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 20150805182049) do
   create_table "posts", force: :cascade do |t|
     t.integer  "before_photo_id"
     t.integer  "after_photo_id"
-    t.integer  "photo_pair_id"
     t.string   "comment"
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
@@ -57,9 +56,6 @@ ActiveRecord::Schema.define(version: 20150805182049) do
     t.string   "profile_photo"
     t.string   "phone_number"
     t.string   "web_address"
-    t.string   "before_photo_id"
-    t.string   "after_photo_id"
-    t.string   "photo_pair_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
@@ -79,9 +75,6 @@ ActiveRecord::Schema.define(version: 20150805182049) do
     t.integer  "zipcode"
     t.string   "phone_number"
     t.string   "web_address"
-    t.string   "before_photo_id"
-    t.string   "after_photo_id"
-    t.string   "photo_pair_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
@@ -95,9 +88,6 @@ ActiveRecord::Schema.define(version: 20150805182049) do
     t.string   "username",                   null: false
     t.string   "member_type"
     t.string   "profile_photo"
-    t.string   "before_photo_id"
-    t.string   "after_photo_id"
-    t.string   "photo_pair_id"
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
     t.string   "profile_photo_file_name"
@@ -107,13 +97,5 @@ ActiveRecord::Schema.define(version: 20150805182049) do
   end
 
   add_index "users", ["email"], name: "index_users_on_email", using: :btree
-
-  create_table "widgets", force: :cascade do |t|
-    t.string   "name"
-    t.text     "description"
-    t.integer  "stock"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
 end
