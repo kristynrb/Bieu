@@ -5,7 +5,7 @@
  */
 html{
   color: black !important;
-  font-family: "Raleway" !important;
+  font-family: "Raleway", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
   font-weight: 100;
 }
 
@@ -37,9 +37,6 @@ h1{
   font-weight: thin !important;
 }
 
-html {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
-}
 .bieu-pink {
   background-color: #f9e6ea;}
 
@@ -5839,7 +5836,7 @@ small {
 .btn.disabled, .disabled.btn-large, .btn-floating.disabled, .btn-large.disabled, .btn:disabled, .btn-large:disabled, .btn-large:disabled, .btn-floating:disabled {
   background-color: #DFDFDF !important;
   box-shadow: none;
-  color: #9F9F9F !important;
+  /*color: #9F9F9F !important;*/
   cursor: default; }
   .btn.disabled *, .disabled.btn-large *, .btn-floating.disabled *, .btn-large.disabled *, .btn:disabled *, .btn-large:disabled *, .btn-large:disabled *, .btn-floating:disabled * {
     pointer-events: none; }
@@ -5854,7 +5851,7 @@ small {
 .btn, .btn-large {
   text-decoration: none;
   color: #fff;
-  background-color: #26a69a;
+  /*background-color: #26a69a;*/
   text-align: center;
   letter-spacing: .5px;
   -webkit-transition: .2s ease-out;
