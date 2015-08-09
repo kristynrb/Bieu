@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-      <div class="col s12 m6 l6">
+      <div class="col s12 m3 l3 ">
         <div>BLUSHINGTON MAKEUP & BEAUTY LOUNGE</div>
         <div class="btn">4.5</div>
         <div>PHONE NUMBER</div>
@@ -13,43 +13,34 @@
 
         <div>MENU</div>
           <div class="row">
-            <div class="col s6 m6 l6 center-align">
-              <%= image_tag p.before_photo_id.url(:square) %>
-              <%= image_tag p.before_photo_id.url(:square) %>
+            <div class="col s3 m3 l3 center-align">
+              <img src="< asset_path('blushington2.jpg) >" />
+              <img src="http://i.imgur.com/ipsh2eVb.jpg">
             </div>
           </div>
         <div>WEBSITE</div>
         <div>http://www.blushington.com/</div>
       </div>
+  </div>
 
       <div class="col s12 m6 l6 center-align">
         <div>PHOTOS</div>
-        <div class="col s12 m6 l6 center-align">
-          <%= image_tag p.after_photo_id.url(:square) %>
-          <%= image_tag p.before_photo_id.url(:square) %>
+        <div class="col s12 m3 l3 center-align">
+          <img src="http://i.imgur.com/ipsh2eVb.jpg">
+          <img src="http://i.imgur.com/ipsh2eVb.jpg">
         </div>
-        <div class="col s12 m6 l6 center-align">
-          <%= image_tag p.after_photo_id.url(:square) %>
-          <%= image_tag p.before_photo_id.url(:square) %>
+        <div class="col s12 m3 l3 center-align">
+          <img src="http://i.imgur.com/ipsh2eVb.jpg">
+          <img src="http://i.imgur.com/ipsh2eVb.jpg">
         </div>
         <br>
         <div>REVIEWS</div>
-          <div class="col s4 m4 l4 center-align">
-            <%= image_tag p.after_photo_id.url(:square) %>
-            <%= image_tag p.after_photo_id.url(:square) %>
-            <%= image_tag p.after_photo_id.url(:square) %>
+          <div class="col s2 m2 l2 center-align">
+            <img src="http://i.imgur.com/ipsh2eVb.jpg">
+            <img src="http://i.imgur.com/ipsh2eVb.jpg">
+            <img src="http://i.imgur.com/ipsh2eVb.jpg">
           </div>
           <a href="#" class="btn">SEE REVIEWS</a>
       </div>
-
-  <div class="row">
-    <div class="col s12 m12">
-      <div class="card-panel white">
-        <span class="black-text"><%= p.comment %></span>
-      </div>
-    </div>
-  </div>
-    <% end %>
-    <a href="<%= new_user_post_path(user.id) %>" class="teal lighten-4 btn">Post another review</a>
-  <% end %>
+    <a href="#" class="teal lighten-4 btn">Post a review</a>
 </div>

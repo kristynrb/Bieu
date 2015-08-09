@@ -4,7 +4,9 @@
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
 html{
-  color: black !important;}
+  color: black !important;
+  font-family: "Raleway" !important;
+  font-weight: 100;
 }
 
 body {
@@ -14,6 +16,8 @@ body {
 }
 
 main {
+  font-family: "Raleway";
+  font-weight: 100;
   flex: 1 0 auto;
 }
 
