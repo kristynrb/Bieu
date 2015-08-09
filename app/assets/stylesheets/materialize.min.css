@@ -28,6 +28,12 @@ h1{
   font-weight: thin !important;
 }
 
+h3{
+  font-size: 26px;
+  color: #9A9696;
+  font-family: 'League Script', cursive;
+}
+
 p{
   color: #AE9630;
 }
