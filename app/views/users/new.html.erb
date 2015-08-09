@@ -1,25 +1,29 @@
 <div class="container">
-  <h3>Sign up</h3>
+  <h3>sign up</h3>
 
   <form action="<%= users_path %>" method="post" enctype="multipart/form-data" accept-charset="UTF-8" >
     <input  type="hidden"
           name="authenticity_token"
           value="<%= form_authenticity_token %>">
 
-        <input type="text" name="user[email]" placeholder="email">
-        <input type="password" name="user[password]" placeholder="password">
         <input type="text" name="user[username]" placeholder="username">
 
-    <div id="fileUpload" class="file-field input-field row">
-      <div id="fileUpload2" class="teal lighten-4 btn">
-        <span>Add a profile photo</span>
-        <input type="file" name="user[profile_photo]" id="profile_photo"/>
-      </div>
-    </div>
+        <div id="fileUpload" class="file-field input-field row">
+          <div id="fileUpload2" class="btn">
+            <span>Add a profile photo</span>
+            <input type="file" name="user[profile_photo]" id="profile_photo"/>
+          </div>
+        </div>
+
+        <input type="text" name="user[email]" placeholder="email">
+        <input type="password" name="user[password]" placeholder="password">
+
+
+
 
     <div><%= @user.profile_photo.url(:thumb) %></div>
 
 
-    <input class="teal lighten-4 btn" type="submit">
+    <input class="btn" type="submit">
   </form>
 </div>
