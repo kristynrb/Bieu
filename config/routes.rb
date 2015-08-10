@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
 
   root 'static_pages#home'
-
   get 'static_pages/aboutUs'
-
   get 'static_pages/blushington'
+  get 'static_pages/alibi'
 
   resources :posts, only: [:show]
 

@@ -3,13 +3,13 @@
 <div class="container">
   <div class="row">
      <div class="col s12">
-        <h3 class="center-align">Welcome, <%= @user.username %></h3>
+        <h3 class="center-align"><%= @user.username %></h3>
       </div>
       <div class="col s12 center-align">
         <img class="circle responsive-img" <%= image_tag @user.profile_photo.url(:square) %>
       </div>
       <div class="col s12 center-align">
-        <a id="btn" class="waves-effect waves-light btn-large center-align" href="<%= new_user_post_path(user.id) %>">Make a review</a>
+        <a class="btn center-align" href="<%= new_user_post_path(user.id) %>">Make a review</a>
       </div>
     </div>
 </div>
