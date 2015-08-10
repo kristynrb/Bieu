@@ -1,0 +1,83 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+ }
+
+ main {
+   flex: 1 0 auto;
+ }
+
+ h1{
+   font-weight: thin !important;
+ }
+
+ h3{
+   font-size: 26px;
+   color: #9A9696;
+   font-family: 'League Script', cursive;
+ }
+
+ p{
+   color: #AE9630;
+ }
+
+ input {
+   /*color: #AE9630;*/
+   border-bottom: 1px solid #AE9630 !important;
+ }
+
+ .btn {
+   color: #AE9630;
+   background-color: white !important;
+ }
+
+ footer.page-foote r{
+   background-color: grey darken-4 !important;
+ }
+ .bieu-pink {
+   background-color: #f9e6ea;
+ }
+
+ .bieu-pink-text {
+   color: #f9e6ea !important;
+ }
+
+ .bieu-green {
+   background-color: #e1c400;
+ }
+
+ .bieu-green-text {
+   color: #e1c400 !important;
+ }
+
+ .bieu-blue {
+     background-color: #d0e0e1;
+ }
+
+ .bieu-blue-text {
+     color: #d0e0e1 !important;
+ }
+
+ html {
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
+   font-weight: 100;
+ }
