@@ -1,0 +1,48 @@
+<div class="container">
+  <h1>Edit your reviews</h1>
+
+  <form action="<%= edit_post_path %>" method="post" enctype="multipart/form-data" accept-charset="UTF-8" >
+    <input  type="hidden"
+            name="authenticity_token"
+            value="<%= form_authenticity_token %>">
+    <input  type="hidden" name="_method" value="patch">
+    <% if !@posts.before_photo_id? %>
+      <h2>You don't have any reviews.<h2>
+      <a href="<%= new_user_post_path(user.id) %>">Post a review</a>
+    <% else %>
+      <% @allposts.each do |p| %>
+        <%= image_tag p.before_photo_id.url(:thumb) %>
+        <%= link_to "Delete", @posts, :confirm => "Are you sure?", :method => :delete %>
+        <%= image_tag p.after_photo_id.url(:thumb) %>
+        <br>
+        <p><%= p.comment %></p>
+        <a href="<%= user_posts_path(:user_id) %>">Delete this review</a>
+      <% end %>
+    <% end %>
+
+    <div id="fileUpload" class="file-field input-field row">
+      <input class="file-path validate" type="text"/>
+      <div id="fileUpload2" class=" teal lighten-4 btn">
+        <span>Upload a before picture</span>
+        <input type="file" name="posts[before_photo_id]" id="before_photo_id"/>
+      </div>
+    </div>
+
+    <div id="fileUpload" class="file-field input-field row">
+      <input class="file-path validate" type="text"/>
+      <div id="fileUpload2" class=" teal lighten-4 btn">
+        <span>Upload a after picture</span>
+        <input type="file" name="posts[after_photo_id]" id="after_photo_id"/>
+      </div>
+    </div>
+
+    <input type="text" name="posts[comment]" placeholder="Comments">
+
+    <button class=" teal lighten-4 btn"
+            type="submit"
+            name="action">FINISHED
+    </button>
+    <br /><br />
+
+    </fieldset>
+</div>å

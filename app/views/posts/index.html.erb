@@ -1,0 +1,29 @@
+
+<% user = @user %>
+<div class="container">
+  <h3>reviews for <%= @user.username %></h3>
+  <% if !@posts.before_photo_id? %>
+    <div>You don't have any reviews.<div>
+    <a href="<%= new_user_post_path(user.id) %>" class="teal lighten-4 btn">Post a review</a>
+  <% else %>
+      <% @allposts.each do |p| %>
+      <div class="row">
+        <div class="col s12 m6 l6 center-align">
+          <%= image_tag p.before_photo_id.url(:square) %>
+        </div>
+        <div class="col s12 m6 l6 center-align">
+          <%= image_tag p.after_photo_id.url(:square) %>
+        </div>
+      </div>
+
+  <div class="row">
+    <div class="col s12 m12">
+      <div class="card-panel white">
+        <span class="black-text"><%= p.comment %></span>
+      </div>
+    </div>
+  </div>
+    <% end %>
+    <a href="<%= new_user_post_path(user.id) %>" class="btn">Post another review</a>
+  <% end %>
+</div>
