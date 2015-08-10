@@ -40,6 +40,8 @@ gem 'aws-sdk', '<2.0'
 # gem that lists db schema
 gem 'annotate'
 
+gem 'puma', group: :production
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
