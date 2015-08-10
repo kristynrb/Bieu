@@ -1,7 +1,7 @@
 
 <% user = @user %>
 <div class="container">
-  <h3>Reviews for <%= @user.username %></h3>
+  <h3>reviews for <%= @user.username %></h3>
   <% if !@posts.before_photo_id? %>
     <div>You don't have any reviews.<div>
     <a href="<%= new_user_post_path(user.id) %>" class="teal lighten-4 btn">Post a review</a>
@@ -24,6 +24,6 @@
     </div>
   </div>
     <% end %>
-    <a href="<%= new_user_post_path(user.id) %>" class="teal lighten-4 btn">Post another review</a>
+    <a href="<%= new_user_post_path(user.id) %>" class="btn">Post another review</a>
   <% end %>
 </div>
