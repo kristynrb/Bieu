@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'static_pages/aboutUs'
   get 'static_pages/blushington'
   get 'static_pages/alibi'
+  get 'static_pages/mac'
 
   resources :posts, only: [:show]
 
