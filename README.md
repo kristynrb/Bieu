@@ -23,5 +23,5 @@ Just log on to https://arcane-stream-7673.herokuapp.com/
 https://trello.com/b/L1V5O7dR/final-project-timeline
 
 ##Wireframes
-![wireframe1](BIEU_Wireframes_(1).sketch)
-![wireframe2](bieu_wireframes_colors.sketch)
+![wireframe1](BieuWireframeFrontPage.pdf)
+![Mockup](BieuMockUp1.pdf)
